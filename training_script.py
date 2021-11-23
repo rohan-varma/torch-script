@@ -1,0 +1,12 @@
+import torch
+
+print("imported")
+
+torch.distributed.init_process_group(backend="nccl")
+cpu_comm = torch.distributed.new_group(backend="gloo")
+
+
+print("initialized pgs")
+
+
+print("done")
